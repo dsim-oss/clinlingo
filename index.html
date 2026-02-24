@@ -13,17 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f0e8;
-      --bg-deep: #ebe3d7;
-      --ink: #1a1410;
-      --ink-soft: #5a4d3e;
-      --ink-muted: #8a7d6e;
-      --accent: #c4522a;
-      --accent-light: #e8654036;
-      --warm: #d4a574;
-      --warm-light: #f0dcc8;
-      --card: rgba(255,255,255,0.72);
-      --card-border: rgba(180,155,125,0.14);
+      --bg: #f7f6f3;
+      --bg-deep: #efeee9;
+      --ink: #1c2028;
+      --ink-soft: #4a5060;
+      --ink-muted: #7a8294;
+      --accent: #0d9488;
+      --accent-light: rgba(13,148,136,0.1);
+      --warm: #94a3b8;
+      --warm-light: #cbd5e1;
+      --card: rgba(255,255,255,0.8);
+      --card-border: rgba(100,116,139,0.12);
       --serif: 'Instrument Serif', Georgia, serif;
       --sans: 'Outfit', system-ui, sans-serif;
     }
@@ -68,10 +68,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(246,240,232,0.85);
+      background: rgba(247,246,243,0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(180,155,125,0.08);
+      border-bottom: 1px solid rgba(100,116,139,0.08);
       transition: all 0.3s ease;
     }
 
@@ -204,11 +204,11 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-      box-shadow: 0 2px 12px rgba(196,82,42,0.2);
+      box-shadow: 0 2px 12px rgba(13,148,136,0.2);
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(196,82,42,0.3);
+      box-shadow: 0 6px 24px rgba(13,148,136,0.3);
     }
 
     .btn-secondary {
@@ -313,7 +313,7 @@
     }
     .problem-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(100,80,50,0.06);
+      box-shadow: 0 8px 32px rgba(71,85,105,0.06);
     }
 
     .problem-icon {
@@ -389,7 +389,7 @@
       border-radius: 12px;
       padding: 16px 20px;
       margin-bottom: 10px;
-      border: 1px solid rgba(180,155,125,0.1);
+      border: 1px solid rgba(100,116,139,0.1);
     }
 
     .feature-phrase .en {
@@ -422,7 +422,7 @@
 
     .cat-chip {
       background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(180,155,125,0.1);
+      border: 1px solid rgba(100,116,139,0.1);
       border-radius: 10px;
       padding: 14px 16px;
       text-align: center;
@@ -447,7 +447,7 @@
       align-items: center;
       gap: 14px;
       background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(180,155,125,0.1);
+      border: 1px solid rgba(100,116,139,0.1);
       border-radius: 12px;
       padding: 14px 18px;
     }
@@ -471,8 +471,8 @@
       border-radius: 6px;
     }
 
-    .badge-live { background: #d4edda; color: #1a5928; }
-    .badge-soon { background: rgba(180,155,125,0.12); color: var(--ink-muted); }
+    .badge-live { background: rgba(13,148,136,0.12); color: #0d7268; }
+    .badge-soon { background: rgba(100,116,139,0.12); color: var(--ink-muted); }
 
     /* ===== FOR WHO ===== */
     .audience-grid {
@@ -523,7 +523,7 @@
       padding: 16px 20px;
       text-align: left;
       font-size: 14px;
-      border-bottom: 1px solid rgba(180,155,125,0.08);
+      border-bottom: 1px solid rgba(100,116,139,0.08);
     }
 
     .compare-table th {
@@ -532,7 +532,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--ink-muted);
-      background: rgba(180,155,125,0.05);
+      background: rgba(100,116,139,0.05);
     }
 
     .compare-table th:last-child {
@@ -546,8 +546,8 @@
 
     .compare-table tr:last-child td { border-bottom: none; }
 
-    .check { color: #2d8a4e; }
-    .cross { color: #c0b0a0; }
+    .check { color: #0d9488; }
+    .cross { color: #94a3b8; }
 
     /* ===== CTA / WAITLIST ===== */
     .cta-section {
@@ -588,7 +588,7 @@
       padding: 16px 20px;
       font-family: var(--sans);
       font-size: 15px;
-      border: 1.5px solid rgba(180,155,125,0.2);
+      border: 1.5px solid rgba(100,116,139,0.2);
       border-radius: 10px;
       background: rgba(255,255,255,0.7);
       color: var(--ink);
@@ -617,7 +617,7 @@
     }
     .waitlist-form button:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(196,82,42,0.25);
+      box-shadow: 0 4px 16px rgba(13,148,136,0.25);
     }
 
     .waitlist-note {
@@ -629,9 +629,9 @@
     .success-msg {
       display: none;
       padding: 20px;
-      background: #d4edda;
+      background: rgba(13,148,136,0.1);
       border-radius: 10px;
-      color: #1a5928;
+      color: #0d7268;
       font-weight: 500;
       font-size: 15px;
     }
@@ -639,7 +639,7 @@
     /* ===== FOOTER ===== */
     footer {
       padding: 48px 32px;
-      border-top: 1px solid rgba(180,155,125,0.1);
+      border-top: 1px solid rgba(100,116,139,0.1);
       text-align: center;
     }
 
@@ -999,21 +999,48 @@
 
   reveals.forEach(el => observer.observe(el));
 
-  // Waitlist form
-  function handleSubmit() {
-    const email = document.getElementById('emailInput').value;
-    if (!email || !email.includes('@')) {
-      document.getElementById('emailInput').style.borderColor = '#c4522a';
+  // Waitlist form — connected to Airtable
+  async function handleSubmit() {
+    const emailInput = document.getElementById('emailInput');
+    const email = emailInput.value.trim();
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      emailInput.style.borderColor = '#0d9488';
       return;
     }
-    // In production, this would POST to your API/Vercel serverless function
-    // For now, show success state
-    document.getElementById('waitlistForm').style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
 
-    // You could also send to a Google Sheet, Airtable, or simple backend:
-    // fetch('/api/waitlist', { method: 'POST', body: JSON.stringify({ email }) });
-    console.log('Waitlist signup:', email);
+    const btn = document.querySelector('.waitlist-form button');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://api.airtable.com/v0/appereEkBMcZhsuCG/tblWv7uliV7eqZaiF', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer patewOjV9vrUdUr7S.c38c3177603f6aa58882316d466037e1cd3d4d03d3a156b348355f9b788ebf0a',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          records: [{
+            fields: {
+              'Email': email,
+              'Source': window.location.hostname,
+            }
+          }]
+        }),
+      });
+
+      if (res.ok) {
+        document.getElementById('waitlistForm').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (err) {
+      // Fallback — still show success to user but log error
+      console.error('Airtable error:', err);
+      document.getElementById('waitlistForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }
   }
 
   // Allow Enter key
