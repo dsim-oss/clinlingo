@@ -277,18 +277,18 @@ function PhraseCard({ phrase, lang, sourceLang, targetLanguages, expanded, onTog
         borderRadius: 14,
         padding: "16px 20px",
         cursor: "pointer",
-        border: "1px solid rgba(180,150,120,0.12)",
+        border: "1px solid rgba(100,116,139,0.12)",
         transition: "all 0.25s cubic-bezier(0.4,0,0.2,1)",
-        boxShadow: expanded ? "0 4px 24px rgba(120,90,60,0.1)" : "0 1px 4px rgba(0,0,0,0.03)",
+        boxShadow: expanded ? "0 4px 24px rgba(71,85,105,0.1)" : "0 1px 4px rgba(0,0,0,0.03)",
         transform: expanded ? "scale(1.01)" : "scale(1)",
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
         <div style={{ flex: 1 }}>
           <div style={{
-            fontFamily: "'Source Serif 4', Georgia, serif",
+            fontFamily: "'Instrument Serif', Georgia, serif",
             fontSize: 16,
-            color: "#2d2520",
+            color: "#1c2028",
             fontWeight: 600,
             lineHeight: 1.45,
             marginBottom: 6,
@@ -296,9 +296,9 @@ function PhraseCard({ phrase, lang, sourceLang, targetLanguages, expanded, onTog
             {phrase[sourceLang]}
           </div>
           <div style={{
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             fontSize: 15,
-            color: "#8b5e3c",
+            color: "#0d9488",
             fontWeight: 500,
             lineHeight: 1.45,
           }}>
@@ -308,11 +308,11 @@ function PhraseCard({ phrase, lang, sourceLang, targetLanguages, expanded, onTog
         {!allSame && targetCodes.length > 1 && (
           <div style={{
             fontSize: 10,
-            color: "#b08860",
-            background: "rgba(180,140,100,0.1)",
+            color: "#64748b",
+            background: "rgba(13,148,136,0.1)",
             padding: "3px 8px",
             borderRadius: 6,
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             whiteSpace: "nowrap",
             marginTop: 2,
             letterSpacing: "0.3px",
@@ -326,7 +326,7 @@ function PhraseCard({ phrase, lang, sourceLang, targetLanguages, expanded, onTog
         <div style={{
           marginTop: 14,
           paddingTop: 14,
-          borderTop: "1px solid rgba(180,150,120,0.1)",
+          borderTop: "1px solid rgba(100,116,139,0.1)",
           display: "flex",
           flexDirection: "column",
           gap: 8,
@@ -336,11 +336,11 @@ function PhraseCard({ phrase, lang, sourceLang, targetLanguages, expanded, onTog
               display: "flex",
               gap: 10,
               alignItems: "baseline",
-              fontFamily: "'DM Sans', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               fontSize: 13,
             }}>
               <span style={{
-                color: "#b08860",
+                color: "#64748b",
                 fontWeight: 600,
                 minWidth: 70,
                 fontSize: 10,
@@ -348,7 +348,7 @@ function PhraseCard({ phrase, lang, sourceLang, targetLanguages, expanded, onTog
                 textTransform: "uppercase",
               }}>{tl.flag} {tl.label}</span>
               <span style={{
-                color: tl.code === lang ? "#3a2510" : "#8b7560",
+                color: tl.code === lang ? "#0d7268" : "#4a5060",
                 fontWeight: tl.code === lang ? 600 : 400,
               }}>{phrase[tl.code]}</span>
             </div>
@@ -375,7 +375,7 @@ function PackSelector({ packs, activePack, onSelect, onClose }) {
       animation: "fadeIn 0.2s ease",
     }} onClick={onClose}>
       <div style={{
-        background: "#f5ede4",
+        background: "#f7f6f3",
         borderRadius: 20,
         padding: 28,
         maxWidth: 400,
@@ -384,16 +384,16 @@ function PackSelector({ packs, activePack, onSelect, onClose }) {
         animation: "slideUp 0.3s ease",
       }} onClick={e => e.stopPropagation()}>
         <div style={{
-          fontFamily: "'Source Serif 4', Georgia, serif",
+          fontFamily: "'Instrument Serif', Georgia, serif",
           fontSize: 22,
           fontWeight: 700,
-          color: "#2d2520",
+          color: "#1c2028",
           marginBottom: 4,
         }}>Language Packs</div>
         <p style={{
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Outfit', sans-serif",
           fontSize: 13,
-          color: "#8b7560",
+          color: "#4a5060",
           margin: "0 0 20px",
         }}>Choose a clinical language pack</p>
 
@@ -408,28 +408,28 @@ function PackSelector({ packs, activePack, onSelect, onClose }) {
                 gap: 14,
                 padding: "16px 18px",
                 borderRadius: 14,
-                border: pack.id === activePack ? "2px solid #8b5e3c" : "1px solid rgba(180,150,120,0.15)",
+                border: pack.id === activePack ? "2px solid #0d9488" : "1px solid rgba(100,116,139,0.15)",
                 background: pack.id === activePack ? "rgba(139,94,60,0.08)" : "rgba(255,255,255,0.7)",
                 cursor: "pointer",
                 textAlign: "left",
                 transition: "all 0.2s ease",
-                fontFamily: "'DM Sans', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
               }}
             >
               <span style={{ fontSize: 28 }}>{pack.flag}</span>
               <div>
                 <div style={{
-                  fontFamily: "'Source Serif 4', Georgia, serif",
+                  fontFamily: "'Instrument Serif', Georgia, serif",
                   fontSize: 16,
                   fontWeight: 600,
-                  color: "#2d2520",
+                  color: "#1c2028",
                 }}>{pack.name}</div>
-                <div style={{ fontSize: 12, color: "#8b7560" }}>
+                <div style={{ fontSize: 12, color: "#4a5060" }}>
                   {pack.description} · {pack.phrases.length} phrases
                 </div>
               </div>
               {pack.id === activePack && (
-                <div style={{ marginLeft: "auto", color: "#8b5e3c", fontWeight: 700, fontSize: 18 }}>✓</div>
+                <div style={{ marginLeft: "auto", color: "#0d9488", fontWeight: 700, fontSize: 18 }}>✓</div>
               )}
             </button>
           ))}
@@ -439,13 +439,13 @@ function PackSelector({ packs, activePack, onSelect, onClose }) {
           marginTop: 20,
           padding: "14px 16px",
           borderRadius: 12,
-          border: "1px dashed rgba(180,150,120,0.25)",
+          border: "1px dashed rgba(100,116,139,0.25)",
           textAlign: "center",
         }}>
-          <div style={{ fontSize: 13, color: "#a09080", fontFamily: "'DM Sans', sans-serif" }}>
+          <div style={{ fontSize: 13, color: "#7a8294", fontFamily: "'Outfit', sans-serif" }}>
             More language packs coming soon
           </div>
-          <div style={{ fontSize: 11, color: "#c0b0a0", marginTop: 4, fontFamily: "'DM Sans', sans-serif" }}>
+          <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 4, fontFamily: "'Outfit', sans-serif" }}>
             Polish · Arabic · Tagalog · Mandarin
           </div>
         </div>
@@ -458,12 +458,12 @@ function PackSelector({ packs, activePack, onSelect, onClose }) {
             padding: "12px",
             borderRadius: 10,
             border: "none",
-            background: "rgba(180,150,120,0.12)",
-            color: "#5a4a3a",
+            background: "rgba(100,116,139,0.12)",
+            color: "#334155",
             fontSize: 14,
             fontWeight: 500,
             cursor: "pointer",
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
           }}
         >Close</button>
       </div>
@@ -516,8 +516,8 @@ export default function ClinLingo() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(170deg, #f5ede4 0%, #ebe0d3 30%, #e8ddd0 60%, #f0e6da 100%)",
-      fontFamily: "'DM Sans', sans-serif",
+      background: "linear-gradient(170deg, #f7f6f3 0%, #efeee9 30%, #e8e7e3 60%, #f3f2ef 100%)",
+      fontFamily: "'Outfit', sans-serif",
     }}>
       <style>{`
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -530,7 +530,7 @@ export default function ClinLingo() {
       {/* Texture */}
       <div style={{
         position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0,
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b09070' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2364748b' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
       }} />
 
       {showPackSelector && (
@@ -553,18 +553,18 @@ export default function ClinLingo() {
           <div style={{
             display: "flex", justifyContent: "center", alignItems: "center", gap: 10, marginBottom: 12,
           }}>
-            <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, transparent, #b08860)", borderRadius: 2 }} />
+            <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, transparent, #64748b)", borderRadius: 2 }} />
             <div style={{
-              fontSize: 10, letterSpacing: 4, color: "#b08860", fontWeight: 600, textTransform: "uppercase",
+              fontSize: 10, letterSpacing: 4, color: "#64748b", fontWeight: 600, textTransform: "uppercase",
             }}>ClinLingo</div>
-            <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, #b08860, transparent)", borderRadius: 2 }} />
+            <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, #64748b, transparent)", borderRadius: 2 }} />
           </div>
 
           {/* Pack Name + Switcher */}
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 10 }}>
             <h1 style={{
-              fontFamily: "'Source Serif 4', Georgia, serif",
-              fontSize: 32, fontWeight: 700, color: "#2d2520",
+              fontFamily: "'Instrument Serif', Georgia, serif",
+              fontSize: 32, fontWeight: 700, color: "#1c2028",
               margin: 0, lineHeight: 1.2, letterSpacing: "-0.5px",
             }}>
               {pack.name}
@@ -572,7 +572,7 @@ export default function ClinLingo() {
             <button
               onClick={() => setShowPackSelector(true)}
               style={{
-                background: "rgba(180,140,100,0.12)",
+                background: "rgba(13,148,136,0.12)",
                 border: "none",
                 borderRadius: 8,
                 padding: "5px 10px",
@@ -587,8 +587,8 @@ export default function ClinLingo() {
             </button>
           </div>
           <p style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 14, color: "#8b7560", margin: "6px 0 0", fontWeight: 400,
+            fontFamily: "'Outfit', sans-serif",
+            fontSize: 14, color: "#4a5060", margin: "6px 0 0", fontWeight: 400,
           }}>
             Clinical Communication in {pack.description}
           </p>
@@ -609,9 +609,9 @@ export default function ClinLingo() {
                   padding: "8px 16px", borderRadius: 9,
                   border: "none", cursor: "pointer", fontSize: 13,
                   fontWeight: activeLang === tl.code ? 600 : 400,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   background: activeLang === tl.code ? "#fff" : "transparent",
-                  color: activeLang === tl.code ? "#2d2520" : "#8b7560",
+                  color: activeLang === tl.code ? "#1c2028" : "#4a5060",
                   boxShadow: activeLang === tl.code ? "0 1px 4px rgba(0,0,0,0.08)" : "none",
                   transition: "all 0.2s ease",
                   display: "flex", alignItems: "center", gap: 6,
@@ -638,25 +638,25 @@ export default function ClinLingo() {
             onChange={e => setSearch(e.target.value)}
             style={{
               width: "100%", padding: "14px 44px 14px 40px", borderRadius: 14,
-              border: "1px solid rgba(180,150,120,0.2)",
+              border: "1px solid rgba(100,116,139,0.2)",
               background: "rgba(255,255,255,0.75)", backdropFilter: "blur(8px)",
               WebkitBackdropFilter: "blur(8px)",
-              fontSize: 15, fontFamily: "'DM Sans', sans-serif",
-              color: "#2d2520", outline: "none", boxSizing: "border-box",
+              fontSize: 15, fontFamily: "'Outfit', sans-serif",
+              color: "#1c2028", outline: "none", boxSizing: "border-box",
               transition: "border-color 0.2s",
             }}
-            onFocus={e => e.target.style.borderColor = "rgba(180,130,80,0.4)"}
-            onBlur={e => e.target.style.borderColor = "rgba(180,150,120,0.2)"}
+            onFocus={e => e.target.style.borderColor = "rgba(13,148,136,0.4)"}
+            onBlur={e => e.target.style.borderColor = "rgba(100,116,139,0.2)"}
           />
           {search && (
             <button
               onClick={() => { setSearch(""); searchRef.current?.focus(); }}
               style={{
                 position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)",
-                background: "rgba(180,150,120,0.15)", border: "none", borderRadius: "50%",
+                background: "rgba(100,116,139,0.15)", border: "none", borderRadius: "50%",
                 width: 24, height: 24, cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 12, color: "#8b7560",
+                fontSize: 12, color: "#4a5060",
               }}
             >✕</button>
           )}
@@ -674,7 +674,7 @@ export default function ClinLingo() {
                 style={{
                   background: "rgba(255,255,255,0.8)",
                   backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)",
-                  border: "1px solid rgba(180,150,120,0.1)",
+                  border: "1px solid rgba(100,116,139,0.1)",
                   borderRadius: 16, padding: "18px 16px",
                   cursor: "pointer", textAlign: "left",
                   transition: "all 0.25s cubic-bezier(0.4,0,0.2,1)",
@@ -683,7 +683,7 @@ export default function ClinLingo() {
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = "translateY(-2px)";
-                  e.currentTarget.style.boxShadow = "0 6px 16px rgba(120,90,60,0.08)";
+                  e.currentTarget.style.boxShadow = "0 6px 16px rgba(71,85,105,0.08)";
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = "translateY(0)";
@@ -692,11 +692,11 @@ export default function ClinLingo() {
               >
                 <div style={{ fontSize: 24, marginBottom: 8 }}>{cat.icon}</div>
                 <div style={{
-                  fontFamily: "'Source Serif 4', Georgia, serif",
-                  fontSize: 15, fontWeight: 600, color: "#2d2520", marginBottom: 4,
+                  fontFamily: "'Instrument Serif', Georgia, serif",
+                  fontSize: 15, fontWeight: 600, color: "#1c2028", marginBottom: 4,
                 }}>{cat.label}</div>
-                <div style={{ fontSize: 12, color: "#a09080", lineHeight: 1.3 }}>{cat.desc}</div>
-                <div style={{ fontSize: 11, color: "#b08860", marginTop: 8, fontWeight: 500 }}>
+                <div style={{ fontSize: 12, color: "#7a8294", lineHeight: 1.3 }}>{cat.desc}</div>
+                <div style={{ fontSize: 11, color: "#64748b", marginTop: 8, fontWeight: 500 }}>
                   {pack.phrases.filter(p => p.cat === cat.id).length} phrases
                 </div>
               </button>
@@ -714,16 +714,16 @@ export default function ClinLingo() {
               onClick={() => setActiveCat(null)}
               style={{
                 background: "rgba(255,255,255,0.7)",
-                border: "1px solid rgba(180,150,120,0.15)",
+                border: "1px solid rgba(100,116,139,0.15)",
                 borderRadius: 10, padding: "8px 14px", cursor: "pointer",
-                fontSize: 13, color: "#8b7560",
-                fontFamily: "'DM Sans', sans-serif", fontWeight: 500,
+                fontSize: 13, color: "#4a5060",
+                fontFamily: "'Outfit', sans-serif", fontWeight: 500,
                 display: "flex", alignItems: "center", gap: 4,
               }}
             >← Back</button>
             <div style={{
-              fontFamily: "'Source Serif 4', Georgia, serif",
-              fontSize: 18, fontWeight: 600, color: "#2d2520",
+              fontFamily: "'Instrument Serif', Georgia, serif",
+              fontSize: 18, fontWeight: 600, color: "#1c2028",
             }}>
               {activeCatData?.icon} {activeCatData?.label}
             </div>
@@ -732,7 +732,7 @@ export default function ClinLingo() {
 
         {/* Search Count */}
         {search && (
-          <div style={{ fontSize: 13, color: "#a09080", marginBottom: 12 }}>
+          <div style={{ fontSize: 13, color: "#7a8294", marginBottom: 12 }}>
             {filtered.length} result{filtered.length !== 1 ? "s" : ""} for "{search}"
           </div>
         )}
@@ -741,7 +741,7 @@ export default function ClinLingo() {
         {(activeCat || search) && (
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {filtered.length === 0 && (
-              <div style={{ textAlign: "center", padding: "40px 20px", color: "#a09080", fontSize: 14 }}>
+              <div style={{ textAlign: "center", padding: "40px 20px", color: "#7a8294", fontSize: 14 }}>
                 No phrases found. Try a different search term.
               </div>
             )}
@@ -763,12 +763,12 @@ export default function ClinLingo() {
         {!activeCat && !search && (
           <div style={{
             textAlign: "center", padding: "20px 0",
-            borderTop: "1px solid rgba(180,150,120,0.1)", marginTop: 8,
+            borderTop: "1px solid rgba(100,116,139,0.1)", marginTop: 8,
           }}>
-            <div style={{ fontSize: 13, color: "#a09080" }}>
+            <div style={{ fontSize: 13, color: "#7a8294" }}>
               {pack.phrases.length} phrases across {pack.categories.length} categories
             </div>
-            <div style={{ fontSize: 11, color: "#c0b0a0", marginTop: 6 }}>
+            <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 6 }}>
               ClinLingo · {pack.name} Pack
             </div>
             <div style={{
@@ -783,7 +783,7 @@ export default function ClinLingo() {
         )}
       </div>
 
-      <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     </div>
   );
 }

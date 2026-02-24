@@ -999,7 +999,7 @@
 
   reveals.forEach(el => observer.observe(el));
 
-  // Waitlist form — connected to Airtable
+  // Waitlist form — calls serverless function
   async function handleSubmit() {
     const emailInput = document.getElementById('emailInput');
     const email = emailInput.value.trim();
@@ -1013,20 +1013,9 @@
     btn.disabled = true;
 
     try {
-      const res = await fetch('https://api.airtable.com/v0/appereEkBMcZhsuCG/tblWv7uliV7eqZaiF', {
+      const res = await fetch('/api/waitlist', {
         method: 'POST',
-        headers: {
-          'Authorization': 'Bearer patewOjV9vrUdUr7S.c38c3177603f6aa58882316d466037e1cd3d4d03d3a156b348355f9b788ebf0a',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          records: [{
-            fields: {
-              'Email': email,
-              'Source': window.location.hostname,
-            }
-          }]
-        }),
+        body: JSON.stringify({ email }),
       });
 
       if (res.ok) {
@@ -1036,8 +1025,7 @@
         throw new Error('Failed');
       }
     } catch (err) {
-      // Fallback — still show success to user but log error
-      console.error('Airtable error:', err);
+      console.error('Waitlist error:', err);
       document.getElementById('waitlistForm').style.display = 'none';
       document.getElementById('successMsg').style.display = 'block';
     }
